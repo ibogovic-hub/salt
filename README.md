@@ -1,1 +1,1 @@
-# salt configuration
+# salt configuration for the lab
