@@ -5,10 +5,12 @@ user_mel:
     - shell: /bin/bash
     - home: /home/mel
     - uid: 10011
-    - groups: users
+    - gid_from_name: True
+    - groups:
+      - users
 
 mel_key:
   ssh_auth.present:
     - name: mel
     - user: mel
-    - source: salt://dev/dev-users/keys/mel.pub
+    - source: salt://dev-users/keys/mel.pub
