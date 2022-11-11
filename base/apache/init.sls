@@ -10,7 +10,7 @@ index_html:
     - user: www-data
     - group: www-data
     - mode: 644
-    - source: salt://srv/salt/apache/templates/index.html
+    - source: salt://srv/salt/base/apache/templates/index.html
 
 apache_service:
   service.running:
