@@ -1,7 +1,7 @@
 install_apache:
   pkg.installed:
     - pkgs:
-      - apache
+      - apache2
 
 
 index_html:
@@ -14,5 +14,5 @@ index_html:
 
 apache_service:
   service.running:
-    - name: apache
+    - name: apache2
     - enable: True
