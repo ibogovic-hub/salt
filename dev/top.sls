@@ -1,3 +1,3 @@
 dev:
-  'salt-minionx':
+  'ubu*':
     - dev-users
