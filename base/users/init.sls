@@ -8,3 +8,11 @@ ivan:
     - groups:
       - operator
       - users
+
+ivan_key:
+  ssh_auth.present:
+    - name: ivan
+    - user: ivan
+    - source: salt://users/keys/ivan.pub
+
+{% for user in salt['pillar.get']%}}
