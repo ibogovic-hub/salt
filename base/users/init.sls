@@ -5,10 +5,10 @@ user_ivan:
     - shell: /bin/bash
     - home: /home/ivan
     - uid: 10010
-    - groups: wheel
+    - groups: users
 
 ivan_key:
   ssh_auth.present:
     - name: ivan
     - user: ivan
-    - source: salt://users/keys/ivan.pub
+    - source: salt://base/users/keys/ivan.pub
