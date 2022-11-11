@@ -1,6 +1,6 @@
 base:
   '*':
+    - users
     - packages
-
-  'ubu*':
+  'ubu*'
     - apache
