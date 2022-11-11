@@ -1,0 +1,5 @@
+'*':
+  - packages
+
+'ubu*':
+  - apache
