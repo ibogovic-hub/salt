@@ -7,8 +7,8 @@ install_apache:
 index_html:
   file.managed:
     - name: /var/www/html/index.html
-    - user: apache
-    - group: apache
+    - user: www-data
+    - group: www-data
     - mode: 644
     - source: salt://srv/salt/apache/templates/index.html
 
