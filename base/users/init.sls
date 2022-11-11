@@ -6,5 +6,5 @@ ivan:
     - uid: 4000
     - gid: 4000
     - groups:
-      - operators
+      - operator
       - users

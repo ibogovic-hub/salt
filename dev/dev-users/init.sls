@@ -6,5 +6,5 @@ mel:
     - uid: 5000
     - gid: 5000
     - groups:
-      - operators
+      - operator
       - users
