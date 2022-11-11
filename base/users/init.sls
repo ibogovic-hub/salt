@@ -5,7 +5,6 @@ user_ivan:
     - shell: /bin/bash
     - home: /home/ivan
     - uid: 10010
-    - gid_from_name: True
     - groups: wheel
 
 ivan_key:
