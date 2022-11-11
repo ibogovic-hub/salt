@@ -5,7 +5,7 @@ user_mel:
     - shell: /bin/bash
     - home: /home/mel
     - uid: 10011
-    - gid_from_name: True
+    - gid: mel
     - groups:
       - users
 
