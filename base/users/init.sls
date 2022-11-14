@@ -8,7 +8,6 @@ user_{{ user }}:
     - uid: {{ data['uid'] }}
     - gid: {{ data['gid'] }}
     - groups: {{ data['groups'] }}
-    - ssh_key: {{ data['ssh_key'] }}
 
 {{ user }}_key:
   ssh_auth.present:
