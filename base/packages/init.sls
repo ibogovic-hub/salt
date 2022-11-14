@@ -7,3 +7,4 @@ install_packages:
       - nmap
       - wget
       - dpkg
+      - vlc
