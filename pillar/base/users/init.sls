@@ -2,6 +2,7 @@ admin_users:
   ivan:
     fullname: ivan nekaj
     shell: /bin/bash
+    home: /home/ivan
     uid: 10001
     gid: ivan
     groups:
@@ -11,6 +12,7 @@ admin_users:
   mel:
     fullname: mel nekaj
     shell: /bin/bash
+    home: /home/mel
     uid: 10002
     gid: mel
     groups:
@@ -20,6 +22,7 @@ admin_users:
   lego:
     fullname: legolas nekaj
     shell: /bin/bash
+    home: /home/lego
     uid: 10003
     gid: lego
     groups:

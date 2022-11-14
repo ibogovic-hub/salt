@@ -4,6 +4,7 @@ user_{{ user }}:
     - user: {{ user }}
     - fullname: {{ data['fullname'] }}
     - shell: {{ data['shell'] }}
+    - home: {{ data:['home'] }}
     - uid: {{ data['uid'] }}
     - gid: {{ data['gid'] }}
     - groups: {{ data['groups'] }}
