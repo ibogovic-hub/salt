@@ -1,3 +1,7 @@
+include: 
+  - .attributes.default
+
+
 {% for user, data in pillar.get('admin_users', {}).items() %}
 user_{{ user }}:
   user.present:
