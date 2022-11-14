@@ -4,7 +4,7 @@ admin_users:
     shell: /bin/bash
     home: /home/ivan
     uid: 10100
-    gid: ivan
+    gid_from_name: True
     groups:
       - users
       - root
@@ -14,7 +14,7 @@ admin_users:
     shell: /bin/bash
     home: /home/mel
     uid: 10101
-    gid: mel
+    gid_from_name: True
     groups:
       - users
       - root
@@ -23,7 +23,7 @@ admin_users:
     fullname: legolas nekaj
     shell: /bin/bash
     home: /home/lego
-    uid: 10102
+    gid_from_name: True
     gid: lego
     groups:
       - users
