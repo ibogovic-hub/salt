@@ -7,16 +7,16 @@ pkg_deps:
 upgrade_pip:
   pip.installed:
     - pkgs:
-     - pip
+      - pip
     - upgrade: True
 
 supervisor_packages:
   pip.installed:
     - pkgs:
-     - supervisor
-     - pip
-     - Distribute
-    - force-reinstall: True
+      - supervisor
+      - pip
+      - Distribute
+    - force_reinstall: True
     - upgrade: True
     - require:
       - pip: upgrade_pip
@@ -26,4 +26,4 @@ upgrade_setuptools:
     - pkgs:
       - setuptools
     - upgrade: True
-    - force-reinstall: True
+    - force_reinstall: True
