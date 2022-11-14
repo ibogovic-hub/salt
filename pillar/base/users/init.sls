@@ -23,8 +23,8 @@ admin_users:
     fullname: legolas nekaj
     shell: /bin/bash
     home: /home/lego
+    uid: 10102
     gid_from_name: True
-    gid: lego
     groups:
       - users
       - root
