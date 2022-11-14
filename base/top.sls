@@ -2,4 +2,3 @@ base:
   '*':
     - users
     - packages
-    - supervisor
