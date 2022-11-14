@@ -11,7 +11,7 @@ user_{{ user }}:
 
 {{ user }}_key:
   ssh_auth.present:
-    - name: {{ user['ssh_key'] }}
+    - name: {{ data['ssh_key'] }}
     - user: {{ user }}
 
 {% endfor %}
