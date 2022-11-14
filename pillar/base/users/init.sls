@@ -3,7 +3,7 @@ admin_users:
     fullname: ivan nekaj
     shell: /bin/bash
     home: /home/ivan
-    uid: 10001
+    uid: 10100
     gid: ivan
     groups:
       - users
@@ -13,7 +13,7 @@ admin_users:
     fullname: mel nekaj
     shell: /bin/bash
     home: /home/mel
-    uid: 10002
+    uid: 10101
     gid: mel
     groups:
       - users
@@ -23,7 +23,7 @@ admin_users:
     fullname: legolas nekaj
     shell: /bin/bash
     home: /home/lego
-    uid: 10003
+    uid: 10102
     gid: lego
     groups:
       - users
