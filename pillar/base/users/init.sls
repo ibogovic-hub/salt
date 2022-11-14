@@ -4,7 +4,6 @@ admin_users:
     shell: /bin/bash
     home: /home/ivan
     uid: 10100
-    gid_from_name: True
     groups:
       - users
       - root
@@ -14,7 +13,6 @@ admin_users:
     shell: /bin/bash
     home: /home/mel
     uid: 10101
-    gid_from_name: True
     groups:
       - users
       - root
@@ -24,7 +22,6 @@ admin_users:
     shell: /bin/bash
     home: /home/lego
     uid: 10102
-    gid_from_name: True
     groups:
       - users
       - root
