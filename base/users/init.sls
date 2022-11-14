@@ -15,4 +15,4 @@ user_{{ user }}:
     - name: {{ user['ssh_key'] }}
     - user: {{ user }}
 
-{{% endfor %}}}
+{% endfor %}
