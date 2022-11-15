@@ -1,4 +1,4 @@
 base:
   '*':
     - users
-    - temp_exec
+    - exec
