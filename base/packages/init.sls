@@ -6,3 +6,4 @@ install_packages:
       - nmap
       - wget
       - dpkg
+      - ssh
