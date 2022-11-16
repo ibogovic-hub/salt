@@ -3,4 +3,4 @@ base:
     - initial
     - users
     - packages
-    - exec
+    - pillar.exec
