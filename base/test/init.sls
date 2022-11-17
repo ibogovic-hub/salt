@@ -1,3 +1,3 @@
 script_run:
   cmd.script:
-    - name: {{ pillar['exec']}}
+    - name: {{ pillar['script_run']}}
