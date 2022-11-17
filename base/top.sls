@@ -3,5 +3,5 @@ base:
     - users
     - packages
 
-  'salt-minion03':
+  'salt-minion03*':
     - test
