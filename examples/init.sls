@@ -1,3 +1,3 @@
-install vim:
+vim installed:
   pkg.installed:
-    - name: vim
+    - name: {{ pillar['editor'] }}
