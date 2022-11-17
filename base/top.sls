@@ -4,4 +4,4 @@ base:
     - packages
 
   'salt-minion03':
-    - exec
+    - test
