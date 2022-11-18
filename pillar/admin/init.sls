@@ -8,7 +8,7 @@ admin_users_prod:
     - groups:
       - root
       - users
-    - ssh_key: {{ pillar['key'] }}
+    - ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINRDZG3pXmA+xHJbZAR0/dC8C/u/NrIIf2K7bybQekO6 ivan@pm.me
 
   mel:
     - fullname: mel nekaj
@@ -19,4 +19,4 @@ admin_users_prod:
     - groups:
       - root
       - users
-    - ssh_key: {{ pillar['key'] }}
+    - ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINRDZG3pXmA+xHJbZAR0/dC8C/u/NrIIf2K7bybQekO6 ivan@pm.me

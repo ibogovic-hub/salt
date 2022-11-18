@@ -7,7 +7,7 @@ admin_users_dev:
     - gid_from_name: True
     - groups:
       - users
-    - ssh_key: {{ pillar['key'] }}
+    - ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINRDZG3pXmA+xHJbZAR0/dC8C/u/NrIIf2K7bybQekO6 ivan@pm.me
 
   micek:
     - fullname: micek nekaj
@@ -17,4 +17,4 @@ admin_users_dev:
     - gid_from_name: True
     - groups:
       - users
-    - ssh_key: {{ pillar['key'] }}
+    - ssh_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINRDZG3pXmA+xHJbZAR0/dC8C/u/NrIIf2K7bybQekO6 ivan@pm.me
