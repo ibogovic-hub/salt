@@ -3,8 +3,6 @@ base:
     - default
     - admin
 
-  'salt-minion03*':
-    - dev
-
-  'salt-minion04*':
+  'salt-minion03.home, salt-minion04.home':
+    - match: list
     - dev
