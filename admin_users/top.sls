@@ -1,3 +1,0 @@
-base:
-  '*':
-   - admin_users
