@@ -2,7 +2,7 @@ base:
   '*':
     - examples
     - nettools
-    - admin_users
+    - admin
 
   'salt-miinion03, salt-minion04'
-    - dev_users
+    - dev

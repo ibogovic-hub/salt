@@ -1,7 +1,7 @@
 base:
   '*':
     - default
-    - admin_users
+    - admin
 
   'salt-minion3, salt-minion04':
-    - dev_users
+    - dev
