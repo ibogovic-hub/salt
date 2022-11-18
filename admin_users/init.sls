@@ -1,4 +1,4 @@
-{% for user, data in pillar.get('admin_users_prod', {}).itemas() %}
+{% for user, data in pillar.get('admin_users_prod', {}).items() %}
 user_{{ user }}:
   user.present:
     - name: {{ user }}
