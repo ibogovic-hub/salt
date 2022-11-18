@@ -6,7 +6,7 @@
     - shell: {{ data['shell'] }}
     - home: {{ data['home'] }}
     - uid: {{ data['uid'] }}
-    - gid:: {{ data['gid:'] }}
+    - gid: {{ data['gid'] }}
     - groups:  {{ data['groups'] }}
 
 {{ user }}_key:
