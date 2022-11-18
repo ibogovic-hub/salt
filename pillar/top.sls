@@ -3,5 +3,8 @@ base:
     - default
     - admin
 
-  'salt-minion03, salt-minion04':
+  'salt-minion03':
+    - dev
+
+  'salt-minion04':
     - dev
