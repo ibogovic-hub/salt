@@ -4,7 +4,6 @@ admin_users_prod:
     shell: /bin/bash
     home: /home/ivan
     uid: 10010
-    gid: 10010
     groups:
       - root
       - users
@@ -15,7 +14,6 @@ admin_users_prod:
     shell: /bin/bash
     home: /home/mel
     uid: 10011
-    gid: 10011
     groups:
       - root
       - users
