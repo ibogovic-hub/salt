@@ -1,2 +1,1 @@
 editor: vim
-drvo: tree
