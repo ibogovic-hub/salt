@@ -9,4 +9,4 @@ base:
     - dev
 
   'salt-minion04*':
-    - apache
+    - update
