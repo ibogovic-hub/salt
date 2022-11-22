@@ -1,7 +1,7 @@
 check-minion-version:
-  cmd.run:
+  cmd.run_stdout:
     - name: "apt update"
 
 check-upgradeable-packages:
-  cmd.run:
+  cmd.run_stdout:
     - name: "apt list --upgradable"
