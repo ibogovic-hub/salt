@@ -4,4 +4,4 @@ check-minion-version:
 
 check-upgradeable-packages:
   cmd.run:
-    - name: "apt --upgradeable"
+    - name: "apt list --upgradable"
