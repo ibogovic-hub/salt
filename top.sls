@@ -1,6 +1,6 @@
 base:
   '*':
-    - test
+    - package-test
 #    - examples
 #    - nettools
 #    - admin
