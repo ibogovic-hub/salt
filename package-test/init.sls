@@ -1,7 +1,7 @@
 check-salt-version:
   module.run:
     - cmd.run_stdout:
-      - test.version
+      - salt-minion --version
 
 refresh-minion-packages:
   module.run:
