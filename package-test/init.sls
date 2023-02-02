@@ -1,7 +1,7 @@
 check-hostname:
   module.run:
     - cmd.run_stdout:
-      - hostname
+      - hostnamectl
 
 check-salt-version:
   module.run:
