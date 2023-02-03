@@ -10,4 +10,4 @@
 {{ this_state }} - deploy the auto-update file:
   file.managed:
     - name: '/etc/apt/apt.conf.d/50unattended-upgrades'
-    - source: salt://automatic-upgrades/files/50unattended-upgrades
+    - source: salt://automatic-updates/files/50unattended-upgrades
