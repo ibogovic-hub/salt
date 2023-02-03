@@ -16,5 +16,5 @@
     - user: root
     - group : root
     - mode: "0644"
-    - require:
-      - pkgs: {{ this_state }} - prerequisites for updates satisfied
+    # - require:
+    #   - pkgs: {{ this_state }} - prerequisites for updates satisfied
