@@ -7,3 +7,11 @@
     - user: root
     - group : root
     - mode: 0644
+
+{{ this_state }} - file to auto update:
+  file.managed:
+    - name: '/etc/apt/apt.conf.d/20auto-upgrades'
+    - source: salt://automatic-updates/files/20auto-upgrades
+    - user: root
+    - group : root
+    - mode: 0644
