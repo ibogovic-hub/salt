@@ -1,3 +1,12 @@
+{% set this_state = "admin" %}
+
+include:
+  - .automatic-updates
+  - .dev
+  - .examples
+  - .nettools
+  - .package-test
+
 {% for user, data in pillar.get('admin_users_prod', {}).items() %}
 {{ user }}:
   user.present:
