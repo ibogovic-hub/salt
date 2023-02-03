@@ -6,4 +6,4 @@
     - source: salt://automatic-upgrades/files/50unattended-upgrades
     - user: root
     - group : root
-    - mode: "0644"
+    - mode: 0644
