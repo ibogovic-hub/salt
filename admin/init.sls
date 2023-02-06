@@ -4,8 +4,8 @@ include:
   - dev
   - examples
   - nettools
-  {# - update-check
-  - update-install #}
+  - update-check
+  - update-install
   - checkmk
 
 {% for user, data in pillar.get('admin_users_prod', {}).items() %}
