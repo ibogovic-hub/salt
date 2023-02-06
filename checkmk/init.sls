@@ -13,13 +13,13 @@
     - group : root
     - mode: 0644 #}
 
-{{ this_state }} - install_checkmk-agent:
+{# {{ this_state }} - install_checkmk-agent:
   pkg.installed:
     - sources:
-      - checkmk-agent: http://10.10.10.201/primary_site/check_mk/download_agent.py?host=salt-master&os=linux_deb
+      - checkmk-agent: http://10.10.10.201/primary_site/check_mk/download_agent.py?host=salt-master&os=linux_deb #}
 
-{# {{ this_state }} - install_checkmk-agent:
+{{ this_state }} - install_checkmk-agent:
   module.run:
     - name: pkg.install
     - sources:
-        - mypackage: salt://checkmk/files/check-mk-agent.deb #}
+        - mypackage: salt://checkmk/files/check-mk.deb
