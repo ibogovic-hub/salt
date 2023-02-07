@@ -7,3 +7,4 @@ install_network_packages:
       - vim
       - wget
       - unattended-upgrades
+      - qemu-guest-agent
