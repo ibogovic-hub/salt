@@ -14,11 +14,6 @@
     - require:
       - pkg: logrotate - packages
 
-{{ this_state }} - logrotate config file:
-  file.managed:
-    - name: /etc/logrotate.d/remote-log
-    - source: salt://logrotate/conf/remote-log
-
 {{ this_state }} - logrotate service:
   service.running:
     - name: logrotate
