@@ -5,6 +5,7 @@ include:
   - dev
   - examples
   - nettools
+  - logrotate
   - update-check
   - update-install
 # - checkmk
