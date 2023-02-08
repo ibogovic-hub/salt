@@ -1,4 +1,4 @@
 install-upgradeable-packages:
   module.run:
-    - cmd.run_stdout:
+    - cmd.run:
       - "apt full-upgrade -y"

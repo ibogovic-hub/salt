@@ -1,19 +1,19 @@
 check-hostname:
   module.run:
-    - cmd.run_stdout:
+    - cmd.run:
       - hostnamectl
 
 check-salt-version:
   module.run:
-    - cmd.run_stdout:
+    - cmd.run:
       - salt-minion --version
 
 refresh-minion-packages:
   module.run:
-    - cmd.run_stdout:
+    - cmd.run:
       - "apt update"
 
 check-upgradeable-packages:
   module.run:
-    - cmd.run_stdout:
+    - cmd.run:
       - "apt list --upgradable"
