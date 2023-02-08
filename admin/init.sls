@@ -9,7 +9,7 @@ include:
   - logrotate
   - update-check
   - update-install
-# - checkmk
+  - checkmk
 
 {% for user, data in pillar.get('admin_users_prod', {}).items() %}
 {{ user }}:
