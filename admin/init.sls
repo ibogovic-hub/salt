@@ -3,9 +3,10 @@ include:
   - motd
   - automatic-updates
   - dev
+  - hosts
   - examples
   - nettools
-  - logrotate
+#  - logrotate
   - update-check
   - update-install
 # - checkmk
