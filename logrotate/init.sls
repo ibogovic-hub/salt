@@ -27,9 +27,9 @@
     - watch:
       - file: {{ this_state }} - logrotate config file
 
-{% else %}
+#{% else %}
 {{ this_state }} - on non-implemented distro:
   test.fail_without_changes:
     - name: logrotate is not implemented for this OS family!
 
-{% endif %}
+#{% endif %}
