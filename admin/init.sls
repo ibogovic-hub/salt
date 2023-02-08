@@ -1,5 +1,6 @@
 {% set this_state = "admin" %}
 include:
+  - motd
   - automatic-updates
   - dev
   - examples
