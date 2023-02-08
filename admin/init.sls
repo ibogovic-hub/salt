@@ -3,7 +3,7 @@ include:
   - motd
   - automatic-updates
   - dev
-  - hosts
+#  - hosts
   - examples
   - nettools
 #  - logrotate
