@@ -1,5 +1,5 @@
 {% set this_state = "logrotate" %}
-{% if grains['os_family'] == 'Debian' %}
+{% if grains['os_family'] == 'Ubuntu' %}
 
 {{ this_state }} - packages:
     pkg:
