@@ -6,7 +6,7 @@ include:
 #  - hosts
   - examples
   - nettools
-#  - logrotate
+  - logrotate
   - update-check
   - update-install
 # - checkmk
