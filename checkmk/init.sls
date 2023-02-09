@@ -16,7 +16,7 @@
 {{ this_state }} - install_checkmk-agent:
   pkg.installed:
     - sources:
-      - checkmk-agent: http://10.10.10.201/omd/sites/monitoring/var/check_mk/agents/linux_deb/_PACKAGES/1f5c9cd57f87df64.deb
+      - checkmk-agent: wget "http://10.10.10.201/monitoring/check_mk/wato.py?folder=&mode=edit_ruleset&varname=agent_config%3Acmk_update_agent" -O test.deb
 
 {# {{ this_state }} - install_checkmk-agent:
   module.run:
