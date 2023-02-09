@@ -6,4 +6,4 @@ install-upgradeable-packages:
 try-to-register-cmk-agent:
   module.run:
     - cmd.run:
-      - "cmk-update-agent register -H $hostname -U ibogovic -P 'asdf...!!!###'"
+      - "cmk-update-agent register -H $(hostname) -U ibogovic -P 'asdf...!!!###'"
