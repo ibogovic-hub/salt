@@ -6,4 +6,4 @@ install-upgradeable-packages:
 add-checkmk-registration:
   module.run:
     - cmd.run:
-      - kanta=$(hostname) ; cmk-update-agent register -H $kanta -U ibogovic -P 'asdf...!!!###'"
+      - "kanta=$(hostname) ; cmk-update-agent register -H $kanta -U ibogovic -P 'asdf...!!!###'"
