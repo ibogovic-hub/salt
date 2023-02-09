@@ -7,8 +7,7 @@ include:
   - examples
   - nettools
   - logrotate
-  - update-check
-  - update-install
+  - updates
   - checkmk
 
 {% for user, data in pillar.get('admin_users_prod', {}).items() %}
