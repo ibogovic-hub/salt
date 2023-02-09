@@ -4,6 +4,7 @@ test-etc-hosts-blockreplace:
     - marker_start: "# BLOCK TOP : salt managed zone : local services : please do not edit"
     - marker_end: "# BLOCK BOTTOM : end of salt managed zone --"
     - content: |
+        10.10.10.140 salt-master
         10.10.10.201 check-mk
         10.10.10.150 ubu-test
         10.10.10.143 salt-minion03 salt-minion03
