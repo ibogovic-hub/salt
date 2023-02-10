@@ -1,0 +1,47 @@
+/var/log/salt/master {
+su root adm
+daily
+dateext
+dateformat .%Y-%m-%d
+copytruncate
+compress
+delaycompress
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/unxz
+compressext .xz
+maxage 30
+missingok
+notifempty
+}
+
+/var/log/salt/minion {
+su root adm
+daily
+dateext
+dateformat .%Y-%m-%d
+copytruncate
+compress
+delaycompress
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/unxz
+compressext .xz
+maxage 30
+missingok
+notifempty
+}
+
+/var/log/salt/key {
+su root adm
+daily
+dateext
+dateformat .%Y-%m-%d
+copytruncate
+compress
+delaycompress
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/unxz
+compressext .xz
+maxage 30
+missingok
+notifempty
+}
