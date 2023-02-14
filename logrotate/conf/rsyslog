@@ -1,6 +1,7 @@
 su root adm
 /var/log/syslog {
 daily
+rotate 30
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -17,6 +18,7 @@ endscript
 }
 /var/log/mail.info {
 daily
+rotate 30
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -35,6 +37,7 @@ endscript
 /var/log/mail.err
 /var/log/mail.log {
 daily
+rotate 30
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -53,6 +56,7 @@ endscript
 /var/log/kern.log
 /var/log/auth.log {
 daily
+rotate 30
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -69,6 +73,7 @@ endscript
 }
 /var/log/user.log {
 daily
+rotate 30
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -86,6 +91,7 @@ endscript
 /var/log/lpr.log
 /var/log/cron.log {
 daily
+rotate 30
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -102,6 +108,7 @@ endscript
 }
 /var/log/debug {
 daily
+rotate 30
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -118,7 +125,8 @@ endscript
 }
 /var/log/messages
 {
-rdaily
+daily
+rotate 30
 dateext
 dateformat .%Y-%m-%d
 copytruncate
