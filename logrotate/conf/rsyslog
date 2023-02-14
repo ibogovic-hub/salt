@@ -1,5 +1,5 @@
-/var/log/syslog {
 su root adm
+/var/log/syslog {
 daily
 dateext
 dateformat .%Y-%m-%d
@@ -7,14 +7,15 @@ copytruncate
 compress
 delaycompress
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/unxz
 compressext .xz
 maxage 30
 missingok
 notifempty
+postrotate
+  /usr/lib/rsyslog/rsyslog-rotate
+endscript
 }
 /var/log/mail.info {
-su root adm
 daily
 dateext
 dateformat .%Y-%m-%d
@@ -22,16 +23,17 @@ copytruncate
 compress
 delaycompress
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/unxz
 compressext .xz
 maxage 30
 missingok
 notifempty
+postrotate
+  /usr/lib/rsyslog/rsyslog-rotate
+endscript
 }
 /var/log/mail.warn
 /var/log/mail.err
 /var/log/mail.log {
-su root adm
 daily
 dateext
 dateformat .%Y-%m-%d
@@ -39,16 +41,17 @@ copytruncate
 compress
 delaycompress
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/unxz
 compressext .xz
 maxage 30
 missingok
 notifempty
+postrotate
+  /usr/lib/rsyslog/rsyslog-rotate
+endscript
 }
 /var/log/daemon.log
 /var/log/kern.log
 /var/log/auth.log {
-su root adm
 daily
 dateext
 dateformat .%Y-%m-%d
@@ -56,14 +59,15 @@ copytruncate
 compress
 delaycompress
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/unxz
 compressext .xz
 maxage 30
 missingok
 notifempty
+postrotate
+  /usr/lib/rsyslog/rsyslog-rotate
+endscript
 }
 /var/log/user.log {
-su root adm
 daily
 dateext
 dateformat .%Y-%m-%d
@@ -71,15 +75,16 @@ copytruncate
 compress
 delaycompress
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/unxz
 compressext .xz
 maxage 30
 missingok
 notifempty
+postrotate
+  /usr/lib/rsyslog/rsyslog-rotate
+endscript
 }
 /var/log/lpr.log
 /var/log/cron.log {
-su root adm
 daily
 dateext
 dateformat .%Y-%m-%d
@@ -87,14 +92,15 @@ copytruncate
 compress
 delaycompress
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/unxz
 compressext .xz
 maxage 30
 missingok
 notifempty
+postrotate
+  /usr/lib/rsyslog/rsyslog-rotate
+endscript
 }
 /var/log/debug {
-su root adm
 daily
 dateext
 dateformat .%Y-%m-%d
@@ -102,22 +108,28 @@ copytruncate
 compress
 delaycompress
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/unxz
 compressext .xz
 maxage 30
 missingok
 notifempty
+postrotate
+  /usr/lib/rsyslog/rsyslog-rotate
+endscript
 }
 /var/log/messages
 {
-        rotate 4
-        weekly
-        missingok
-        notifempty
-        compress
-        delaycompress
-        sharedscripts
-        postrotate
-                /usr/lib/rsyslog/rsyslog-rotate
-        endscript
+rdaily
+dateext
+dateformat .%Y-%m-%d
+copytruncate
+compress
+delaycompress
+compresscmd /usr/bin/xz
+compressext .xz
+maxage 30
+missingok
+notifempty
+postrotate
+  /usr/lib/rsyslog/rsyslog-rotate
+endscript
 }
