@@ -1,8 +1,8 @@
 base:
-  'prod':
-    - match: nodegroups
+  prod:
+    - match: nodegroup
     - admin
     
-  'group01':
-    - match: nodegroups
+  group01:
+    - match: nodegroup
     - dev
