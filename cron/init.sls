@@ -1,8 +1,10 @@
 run_logrotate:
   cron.present:
-    - name: /usr/sbin/logrotate /etc/logrotate.conf
+    - name: /usr/sbin/logrotate -fv /etc/logrotate.conf
     - user: root
     - special: '@hourly'
+    - require:
+      - file: /etc/logrotate.conf
     {# - user: root
     - minute: 00
     - hour: 01
@@ -11,9 +13,11 @@ run_logrotate:
     - dayweek: '*' #}
 run_rsyslog:
   cron.present:
-    - name: /usr/sbin/logrotate /etc/logrotate.d/rsyslog
+    - name: /usr/sbin/logrotate -fv /etc/logrotate.d/rsyslog
     - user: root
     - special: '@hourly'
+    - require:
+      - file: /etc/logrotate.d/rsyslog
 {# cron_systemd-tmpfiles:
   cron.present:
     - name: systemd-tmpfiles --clean
