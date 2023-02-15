@@ -19,6 +19,3 @@ base:
     - group02
     - group03
     - group04
-
-  'salt-minion04*':
-    - test
