@@ -1,8 +1,24 @@
 base:
-  '*':
-    - default
+  'prod':
     - admin
-
-  'dev':
-    - match: nodegroup
     - dev
+    - motd
+    - automatic-updates
+    - hosts
+    - examples
+    - nettools
+    - logrotate
+    - cron
+    - updates
+    - checkmk
+    - user-settings
+    
+  'dev':
+    - match: nodegroup  
+    - group01
+    - group02
+    - group03
+    - group04
+
+  'salt-minion04*':
+    - test
