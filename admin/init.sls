@@ -1,16 +1,16 @@
 {% set this_state = "admin" %}
 include:
-  - motd
+  {# - motd
   - automatic-updates
-  - dev
   - hosts
+  - dev
   - examples
   - nettools
   - logrotate
   - cron
   - updates
   - checkmk
-  - user-settings
+  - user-settings #}
 
 {% for user, data in pillar.get('admin_users_prod', {}).items() %}
 {{ user }}:
