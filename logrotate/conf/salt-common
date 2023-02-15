@@ -1,6 +1,6 @@
 su root adm
 /var/log/salt/master {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -17,7 +17,7 @@ postrotate
 endscript
 }
 /var/log/salt/minion {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -35,7 +35,7 @@ endscript
 }
 
 /var/log/salt/key {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d

@@ -1,6 +1,6 @@
 su root adm
 /var/log/syslog {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -17,7 +17,7 @@ postrotate
 endscript
 }
 /var/log/mail.info {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -36,7 +36,7 @@ endscript
 /var/log/mail.warn
 /var/log/mail.err
 /var/log/mail.log {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -55,7 +55,7 @@ endscript
 /var/log/daemon.log
 /var/log/kern.log
 /var/log/auth.log {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -72,7 +72,7 @@ postrotate
 endscript
 }
 /var/log/user.log {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -90,7 +90,7 @@ endscript
 }
 /var/log/lpr.log
 /var/log/cron.log {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -107,7 +107,7 @@ postrotate
 endscript
 }
 /var/log/debug {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
@@ -125,7 +125,7 @@ endscript
 }
 /var/log/messages
 {
-daily
+hourly
 rotate 30
 dateext
 dateformat .%Y-%m-%d
