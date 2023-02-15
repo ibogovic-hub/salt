@@ -31,7 +31,7 @@
     - name: logrotate
     - enable: true
     - restart: true
-    {# - watch:
+    - watch:
       - file: /etc/logrotate.conf
       - file: /etc/logrotate.d/salt-common
-      - file: /etc/logrotate.d/rsyslog #}
+      - file: /etc/logrotate.d/rsyslog
