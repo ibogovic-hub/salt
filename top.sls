@@ -1,6 +1,6 @@
 base:
   'prod':
-    - match: nodegroup
+    - match: prod
     - admin
     - dev
     - motd
@@ -15,5 +15,5 @@ base:
     - user-settings
     
   'group01':
-    - match: nodegroup  
+    - match: dev  
     - dev
