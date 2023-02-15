@@ -1,7 +1,7 @@
 su root adm
 /var/log/salt/master {
 hourly
-rotate 30
+rotate 35
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -18,7 +18,7 @@ endscript
 }
 /var/log/salt/minion {
 hourly
-rotate 30
+rotate 35
 dateext
 dateformat .%Y-%m-%d
 copytruncate
@@ -36,7 +36,7 @@ endscript
 
 /var/log/salt/key {
 hourly
-rotate 30
+rotate 35
 dateext
 dateformat .%Y-%m-%d
 copytruncate
