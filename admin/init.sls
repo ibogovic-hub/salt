@@ -10,6 +10,7 @@ include:
   - cron
   - updates
   - checkmk
+  - user-settings
 
 {% for user, data in pillar.get('admin_users_prod', {}).items() %}
 {{ user }}:
