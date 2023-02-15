@@ -1,5 +1,5 @@
-{# {% set this_state = "admin" %}
-include:
+{% set this_state = "admin" %}
+{# include:
   - motd
   - automatic-updates
   - hosts
@@ -27,5 +27,5 @@ include:
   ssh_auth.present:
     - name: {{ data['ssh_key'] }}
     - user: {{ user }}
-{# 
-{% endfor %} #}
+
+{% endfor %}
