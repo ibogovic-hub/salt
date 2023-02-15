@@ -7,6 +7,7 @@ include:
   - examples
   - nettools
   - logrotate
+  - cron
   - updates
   - checkmk
 
