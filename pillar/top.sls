@@ -2,6 +2,7 @@ base:
   prod:
     - match: nodegroup
     - admin
+    - default
   
   group1:
     - match: nodegroup
