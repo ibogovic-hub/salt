@@ -1,21 +1,9 @@
 base:
   'prod':
-    - admin
-    - dev
-    - motd
-    - automatic-updates
-    - hosts
-    - examples
-    - nettools
-    - logrotate
-    - cron
-    - updates
-    - checkmk
-    - user-settings
+    - match: nodegroup
+      - admin
+      - dev
     
-  'dev':
+  'group01':
     - match: nodegroup  
-    - group01
-    - group02
-    - group03
-    - group04
+      - dev
