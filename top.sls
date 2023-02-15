@@ -1,4 +1,6 @@
 base:
+  '*':
+  
   'prod':
     - match: nodegroup
     - admin
