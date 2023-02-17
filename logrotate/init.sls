@@ -31,5 +31,5 @@
     - name: logrotate
     - enable: true
     - reload: true
-    - watch:
-      - pkg: logrotate
+    {# - watch:
+      - pkg: logrotate #}
