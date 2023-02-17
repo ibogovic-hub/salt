@@ -30,8 +30,6 @@
   service.running:
     - name: logrotate
     - enable: true
-    - restart: true
+    - reload: true
     - watch:
-      - file: /etc/logrotate.conf
-      - file: /etc/logrotate.d/salt-common
-      - file: /etc/logrotate.d/rsyslog
+      - pkg: logrotate
