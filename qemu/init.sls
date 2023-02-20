@@ -1,6 +1,6 @@
-{% set this_state = "package-install" %}
+{% set this_state = "qemu-install" %}
 
-{{ this_state }} - install_packages:
+{{ this_state }} - install_qemu:
   pkg.installed:
     - pkgs:
       - qemu-guest-agent
