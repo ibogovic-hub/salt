@@ -14,6 +14,7 @@ base:
     - checkmk
     - user-settings
     - vim
+    - qemu
     
   group1:
     - match: nodegroup
