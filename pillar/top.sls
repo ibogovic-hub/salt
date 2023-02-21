@@ -23,3 +23,7 @@ base:
     - match: nodegroup
     - dev
     - default
+  
+  update:
+    - match: nodegroup
+    - admin

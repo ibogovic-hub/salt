@@ -68,3 +68,14 @@ base:
     - updates
     - checkmk
     - vim
+  
+  update:
+    - match: nodegroup
+    - admin
+    - updates
+    - cron
+    - nettools
+    - motd
+    - logrotate
+    - hosts
+    - automatic-updates

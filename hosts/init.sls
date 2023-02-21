@@ -5,7 +5,7 @@ test-etc-hosts-blockreplace:
     - marker_end: "# BLOCK BOTTOM : end of salt managed zone --"
     - content: |
         192.168.1.12	check-mk
-        192.168.1.252	print_scan
+        192.168.1.252	print-scan
         192.168.1.15	salt-master
         192.168.1.130	salt-minion01
         192.168.1.119	salt-minion02
@@ -24,5 +24,6 @@ test-etc-hosts-blockreplace:
         192.168.1.103	salt-minion15
         10.10.10.254	torente
         192.168.1.11	ubu-test
+        192.168.1.254 pikachu
     - show_changes: True
     - append_if_not_found: True
