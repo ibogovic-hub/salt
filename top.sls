@@ -11,7 +11,7 @@ base:
     - logrotate
     - cron
     - updates
-    - checkmk
+#    - checkmk
     - user-settings
     - vim
     
@@ -26,7 +26,7 @@ base:
     - logrotate
     - cron
     - updates
-    - checkmk
+#    - checkmk
     - user-settings
     - vim
   
@@ -41,7 +41,7 @@ base:
     - logrotate
     - cron
     - updates
-    - checkmk
+#    - checkmk
     - user-settings
     - vim
 
@@ -56,7 +56,7 @@ base:
     - logrotate
     - cron
     - updates
-    - checkmk
+#    - checkmk
     - user-settings
     - vim
   
@@ -66,7 +66,7 @@ base:
     - automatic-updates
     - dev
     - updates
-    - checkmk
+#    - checkmk
     - vim
   
   update:
@@ -79,3 +79,4 @@ base:
     - logrotate
     - hosts
     - automatic-updates
+    - vim

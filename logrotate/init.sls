@@ -26,10 +26,20 @@
     - require:
       - pkg: {{ this_state }} - packages
 
-{{ this_state }} - restart logrotate service:
+{# {{ this_state }} - restart logrotate service:
   service.running:
     - name: logrotate
     - enable: true
     - reload: true
-    {# - watch:
+    - watch:
       - pkg: logrotate #}
+
+{{ this_state }} - run_on_changes:
+  cmd.wait:
+    - name: logrotate
+    - enable: true
+    - reload: true
+    - watch:
+      - file: {{ this_state }} - logrotate config file
+      - file: {{ this_state }} - salt-common config file
+      - file: {{ this_state }} - rsyslog config file
