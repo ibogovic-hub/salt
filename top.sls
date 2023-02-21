@@ -65,6 +65,7 @@ base:
     - motd
     - automatic-updates
     - dev
+    - hosts
     - updates
 #    - checkmk
     - vim
