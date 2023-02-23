@@ -1,6 +1,7 @@
 install_apache:
   pkg.installed:
-    - apache2
+    - pkgs:
+     - apache2
 
 index_html:
   file.managed:
