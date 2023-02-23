@@ -1,9 +1,11 @@
-install_apache:
+{% set this_state = "apache2" %}
+
+{{ this_state }} - install_packages:
   pkg.installed:
     - pkgs:
-     - apache2
+      - apache2
 
-index_html:
+{{ this_state }} - index_html:
   file.managed:
     - name: /var/www/html/index.html
     - user: www-data
@@ -12,7 +14,7 @@ index_html:
     - source: salt://apache/templates/index.html
     - template: jinja
 
-apache_service:
+{{ this_state }} - apache_service:
   service.running:
     - name: apache2
     - enable: True
