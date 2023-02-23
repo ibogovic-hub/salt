@@ -9,6 +9,7 @@ index_html:
     - group: www-data
     - mode: 644
     - source: salt://apache/templates/index.html
+    - template: jinja
 
 apache_service:
   service.running:

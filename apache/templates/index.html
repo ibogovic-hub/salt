@@ -1,1 +1,6 @@
 Hi from one of minions!!!
+
+{% set salt-minion14_ip = salt['mine.get']('salt-minion14', 'network.ip_addrs') %}
+{{ salt-minion14_ip['salt-minion14'][0] }}
+{% set salt-minion15_ip = salt['mine.get']('salt-minion15', 'network.ip_addrs') %}
+{{ salt-minion15_ip['salt-minion15'][0] }}
