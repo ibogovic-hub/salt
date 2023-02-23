@@ -67,7 +67,7 @@ base:
     - dev
     - hosts
     - updates
-#    - checkmk
+    - apache
     - vim
   
   update:
