@@ -5,6 +5,6 @@
     - humanname: salt repository
 #    - name: salt.list
     - baseurl: https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest/
-    - gpgcheck: true
+    - gpgcheck: 1
     - gpgkey: https://repo.saltproject.io/py3/ubuntu/20.04/amd64/latest/SALTSTACK-GPG-KEY.pub
-    - enabled: true
+    - enabled: 1
