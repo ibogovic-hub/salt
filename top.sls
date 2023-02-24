@@ -3,6 +3,7 @@ base:
     - match: nodegroup
     - admin
     - motd
+    - repos
     - automatic-updates
     - hosts
     - dev
@@ -18,6 +19,7 @@ base:
   group1:
     - match: nodegroup
     - motd
+    - repos
     - automatic-updates
     - hosts
     - dev
@@ -33,6 +35,7 @@ base:
   group2:
     - match: nodegroup
     - motd
+    - repos
     - automatic-updates
     - hosts
     - dev
@@ -48,6 +51,7 @@ base:
   group3:
     - match: nodegroup
     - motd
+    - repos
     - automatic-updates
     - hosts
     - dev
@@ -63,6 +67,7 @@ base:
   group4:
     - match: nodegroup
     - motd
+    - repos
     - automatic-updates
     - dev
     - hosts
@@ -73,6 +78,7 @@ base:
   update:
     - match: nodegroup
     - admin
+    - repos
     - updates
     - cron
     - nettools
