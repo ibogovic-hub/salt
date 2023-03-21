@@ -1,53 +1,59 @@
 su root adm
 /var/log/salt/master {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
 /var/log/salt/minion {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
 
 /var/log/salt/key {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }

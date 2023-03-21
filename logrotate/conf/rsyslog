@@ -1,143 +1,158 @@
 su root adm
 /var/log/syslog {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
 /var/log/mail.info {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
 /var/log/mail.warn
 /var/log/mail.err
 /var/log/mail.log {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
 /var/log/daemon.log
 /var/log/kern.log
 /var/log/auth.log {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
 /var/log/user.log {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
 /var/log/lpr.log
 /var/log/cron.log {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
 /var/log/debug {
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }
-/var/log/messages
-{
-hourly
-rotate 35
-dateext
-dateformat .%Y-%m-%d
-copytruncate
+/var/log/messages {
+su root adm
+daily
+rotate 30
 compress
 delaycompress
-compresscmd /usr/bin/xz
-compressext .xz
-maxage 30
-missingok
 notifempty
+missingok
+nocreate
+create 0640 root adm
+dateext
+dateformat -%Y-%m-%d-%s
+compresscmd /usr/bin/xz
+uncompresscmd /usr/bin/xz -d
+compressoptions -9
 postrotate
-  /usr/lib/rsyslog/rsyslog-rotate
+    systemctl restart logrotate
 endscript
 }

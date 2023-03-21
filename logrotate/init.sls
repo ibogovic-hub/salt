@@ -26,14 +26,6 @@
     - require:
       - pkg: {{ this_state }} - packages
 
-{# {{ this_state }} - restart logrotate service:
-  service.running:
-    - name: logrotate
-    - enable: true
-    - reload: true
-    - watch:
-      - pkg: logrotate #}
-
 {{ this_state }} - run_on_changes:
   cmd.wait:
     - name: logrotate
