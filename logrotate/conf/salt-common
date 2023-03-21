@@ -10,7 +10,7 @@ create 0640 root adm
 dateext
 dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/xz -d
+uncompresscmd /usr/bin/xz
 compressoptions -9
 olddir /var/log/test
 postrotate
@@ -29,7 +29,7 @@ create 0640 root adm
 dateext
 dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/xz -d
+uncompresscmd /usr/bin/xz
 compressoptions -9
 olddir /var/log/test
 postrotate
@@ -48,7 +48,7 @@ create 0640 root adm
 dateext
 dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
-uncompresscmd /usr/bin/xz -d
+uncompresscmd /usr/bin/xz
 compressoptions -9
 olddir /var/log/test
 postrotate
