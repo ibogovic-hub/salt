@@ -16,7 +16,7 @@
 
 {{this_state}} - /etc/logrotate.d/salt-common:
   file.managed:
-    -name: /etc/logrotate.d/salt-common
+    - name: /etc/logrotate.d/salt-common
     - source: salt://logrotate/conf/salt-common
     - mode: 0644
     - user: root
