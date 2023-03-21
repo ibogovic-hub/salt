@@ -7,7 +7,6 @@
 
 {{ this_state }} - /etc/logrotate:
   file.managed:
-    - name: /etc/logrotate.conf
     - source: salt://logrotate/conf/logrotate.conf
     - mode: 0644
     - user: root
@@ -26,7 +25,6 @@
 
 {{ this_state }} - /etc/logrotate.d/rsyslog:
   file.managed:
-    - name: /etc/logrotate.d/rsyslog
     - source: salt://logrotate/conf/rsyslog
     - mode: 0644
     - user: root
