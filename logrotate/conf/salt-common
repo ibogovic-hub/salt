@@ -1,6 +1,4 @@
-su root adm
 /var/log/salt/master {
-su root adm
 daily
 rotate 30
 compress
@@ -14,12 +12,12 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
 }
 /var/log/salt/minion {
-su root adm
 daily
 rotate 30
 compress
@@ -33,13 +31,12 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
 }
-
 /var/log/salt/key {
-su root adm
 daily
 rotate 30
 compress
@@ -53,6 +50,7 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript

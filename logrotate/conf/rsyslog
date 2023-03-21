@@ -1,6 +1,4 @@
-su root adm
 /var/log/syslog {
-su root adm
 daily
 rotate 30
 compress
@@ -14,12 +12,12 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
 }
 /var/log/mail.info {
-su root adm
 daily
 rotate 30
 compress
@@ -33,6 +31,7 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
@@ -40,7 +39,6 @@ endscript
 /var/log/mail.warn
 /var/log/mail.err
 /var/log/mail.log {
-su root adm
 daily
 rotate 30
 compress
@@ -54,6 +52,7 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
@@ -61,7 +60,6 @@ endscript
 /var/log/daemon.log
 /var/log/kern.log
 /var/log/auth.log {
-su root adm
 daily
 rotate 30
 compress
@@ -75,12 +73,12 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
 }
 /var/log/user.log {
-su root adm
 daily
 rotate 30
 compress
@@ -94,13 +92,13 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
 }
 /var/log/lpr.log
 /var/log/cron.log {
-su root adm
 daily
 rotate 30
 compress
@@ -114,12 +112,12 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
 }
 /var/log/debug {
-su root adm
 daily
 rotate 30
 compress
@@ -133,12 +131,12 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript
 }
 /var/log/messages {
-su root adm
 daily
 rotate 30
 compress
@@ -152,6 +150,7 @@ dateformat -%Y-%m-%d-%s
 compresscmd /usr/bin/xz
 uncompresscmd /usr/bin/xz -d
 compressoptions -9
+olddir /var/log/test
 postrotate
     systemctl restart logrotate
 endscript

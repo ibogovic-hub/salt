@@ -5,33 +5,38 @@
     - pkgs:
         - logrotate
 
-{{ this_state }} - logrotate config file:
+{{ this_state }} - /etc/logrotate:
   file.managed:
     - name: /etc/logrotate.conf
     - source: salt://logrotate/conf/logrotate.conf
-    - require:
-      - pkg: {{ this_state }} - packages
+    - mode: 0644
+    - user: root
+    - group: root
+    - template: jinja
 
-{{ this_state }} - salt-common config file:
+{{ this_state }} - /etc/logrotate.d/salt-common:
   file.managed:
-    - name: /etc/logrotate.d/salt-common
     - source: salt://logrotate/conf/salt-common
+    - mode: 0644
+    - user: root
+    - group: root
+    - template: jinja
     - require:
-      - pkg: {{ this_state }} - packages
+      - file: {{ this_state }} - /etc/logrotate
 
-{{ this_state }} - rsyslog config file:
+{{ this_state }} - /etc/logrotate.d/rsyslog:
   file.managed:
     - name: /etc/logrotate.d/rsyslog
     - source: salt://logrotate/conf/rsyslog
+    - mode: 0644
+    - user: root
+    - group: root
+    - template: jinja
     - require:
-      - pkg: {{ this_state }} - packages
+      - file: {{ this_state }} - /etc/logrotate.d/salt-common
 
-{{ this_state }} - run_on_changes:
-  cmd.wait:
+{{ this_state }} - logrotate_service:
+  service.running:
     - name: logrotate
-    - enable: true
-    - reload: true
     - watch:
-      - file: {{ this_state }} - logrotate config file
-      - file: {{ this_state }} - salt-common config file
-      - file: {{ this_state }} - rsyslog config file
+      - file: /etc/logrotate.d/rsyslog
