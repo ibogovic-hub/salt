@@ -21,7 +21,7 @@
     - group: root
     - template: jinja
     - require:
-      - file: {{this_state}} - /etc/logrotate.conf
+      - file: /etc/logrotate.conf
 
 {{this_state}} - /etc/logrotate.d/rsyslog:
   file.managed:
@@ -31,10 +31,10 @@
     - group: root
     - template: jinja
     - require:
-      - file: {{this_state}} - /etc/logrotate.d/salt-common
+      - file: /etc/logrotate.d/salt-common
 
 {{this_state}} - logrotate_service:
   service.running:
     - name: logrotate
     - watch:
-      - file: {{this_state}} - /etc/logrotate.d/rsyslog
+      - file: /etc/logrotate.d/rsyslog
