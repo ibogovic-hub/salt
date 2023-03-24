@@ -15,7 +15,7 @@ base:
 #    - checkmk
     - user-settings
     - vim
-    - saltstack_minion
+    - saltstack
     
   group1:
     - match: nodegroup
