@@ -4,6 +4,13 @@
 openssh-server:
   pkg.installed
 
+# /srv/salt/cert_login.sls
+
+cert_login:
+  ssh_auth.present:
+    - user: baggins
+    - source: salt://sshd/file/bogovic.pub
+
 # Update the sshd_config file
 /etc/ssh/sshd_config:
   file.managed:
